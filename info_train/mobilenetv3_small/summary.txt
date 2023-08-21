@@ -1,0 +1,174 @@
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1           [-1, 16, 50, 50]             432
+       BatchNorm2d-2           [-1, 16, 50, 50]              32
+         Hardswish-3           [-1, 16, 50, 50]               0
+            Conv2d-4           [-1, 16, 25, 25]             144
+       BatchNorm2d-5           [-1, 16, 25, 25]              32
+              ReLU-6           [-1, 16, 25, 25]               0
+ AdaptiveAvgPool2d-7             [-1, 16, 1, 1]               0
+            Conv2d-8              [-1, 8, 1, 1]             136
+              ReLU-9              [-1, 8, 1, 1]               0
+           Conv2d-10             [-1, 16, 1, 1]             144
+      Hardsigmoid-11             [-1, 16, 1, 1]               0
+SqueezeExcitation-12           [-1, 16, 25, 25]               0
+           Conv2d-13           [-1, 16, 25, 25]             256
+      BatchNorm2d-14           [-1, 16, 25, 25]              32
+ InvertedResidual-15           [-1, 16, 25, 25]               0
+           Conv2d-16           [-1, 72, 25, 25]           1,152
+      BatchNorm2d-17           [-1, 72, 25, 25]             144
+             ReLU-18           [-1, 72, 25, 25]               0
+           Conv2d-19           [-1, 72, 13, 13]             648
+      BatchNorm2d-20           [-1, 72, 13, 13]             144
+             ReLU-21           [-1, 72, 13, 13]               0
+           Conv2d-22           [-1, 24, 13, 13]           1,728
+      BatchNorm2d-23           [-1, 24, 13, 13]              48
+ InvertedResidual-24           [-1, 24, 13, 13]               0
+           Conv2d-25           [-1, 88, 13, 13]           2,112
+      BatchNorm2d-26           [-1, 88, 13, 13]             176
+             ReLU-27           [-1, 88, 13, 13]               0
+           Conv2d-28           [-1, 88, 13, 13]             792
+      BatchNorm2d-29           [-1, 88, 13, 13]             176
+             ReLU-30           [-1, 88, 13, 13]               0
+           Conv2d-31           [-1, 24, 13, 13]           2,112
+      BatchNorm2d-32           [-1, 24, 13, 13]              48
+ InvertedResidual-33           [-1, 24, 13, 13]               0
+           Conv2d-34           [-1, 96, 13, 13]           2,304
+      BatchNorm2d-35           [-1, 96, 13, 13]             192
+        Hardswish-36           [-1, 96, 13, 13]               0
+           Conv2d-37             [-1, 96, 7, 7]           2,400
+      BatchNorm2d-38             [-1, 96, 7, 7]             192
+        Hardswish-39             [-1, 96, 7, 7]               0
+AdaptiveAvgPool2d-40             [-1, 96, 1, 1]               0
+           Conv2d-41             [-1, 24, 1, 1]           2,328
+             ReLU-42             [-1, 24, 1, 1]               0
+           Conv2d-43             [-1, 96, 1, 1]           2,400
+      Hardsigmoid-44             [-1, 96, 1, 1]               0
+SqueezeExcitation-45             [-1, 96, 7, 7]               0
+           Conv2d-46             [-1, 40, 7, 7]           3,840
+      BatchNorm2d-47             [-1, 40, 7, 7]              80
+ InvertedResidual-48             [-1, 40, 7, 7]               0
+           Conv2d-49            [-1, 240, 7, 7]           9,600
+      BatchNorm2d-50            [-1, 240, 7, 7]             480
+        Hardswish-51            [-1, 240, 7, 7]               0
+           Conv2d-52            [-1, 240, 7, 7]           6,000
+      BatchNorm2d-53            [-1, 240, 7, 7]             480
+        Hardswish-54            [-1, 240, 7, 7]               0
+AdaptiveAvgPool2d-55            [-1, 240, 1, 1]               0
+           Conv2d-56             [-1, 64, 1, 1]          15,424
+             ReLU-57             [-1, 64, 1, 1]               0
+           Conv2d-58            [-1, 240, 1, 1]          15,600
+      Hardsigmoid-59            [-1, 240, 1, 1]               0
+SqueezeExcitation-60            [-1, 240, 7, 7]               0
+           Conv2d-61             [-1, 40, 7, 7]           9,600
+      BatchNorm2d-62             [-1, 40, 7, 7]              80
+ InvertedResidual-63             [-1, 40, 7, 7]               0
+           Conv2d-64            [-1, 240, 7, 7]           9,600
+      BatchNorm2d-65            [-1, 240, 7, 7]             480
+        Hardswish-66            [-1, 240, 7, 7]               0
+           Conv2d-67            [-1, 240, 7, 7]           6,000
+      BatchNorm2d-68            [-1, 240, 7, 7]             480
+        Hardswish-69            [-1, 240, 7, 7]               0
+AdaptiveAvgPool2d-70            [-1, 240, 1, 1]               0
+           Conv2d-71             [-1, 64, 1, 1]          15,424
+             ReLU-72             [-1, 64, 1, 1]               0
+           Conv2d-73            [-1, 240, 1, 1]          15,600
+      Hardsigmoid-74            [-1, 240, 1, 1]               0
+SqueezeExcitation-75            [-1, 240, 7, 7]               0
+           Conv2d-76             [-1, 40, 7, 7]           9,600
+      BatchNorm2d-77             [-1, 40, 7, 7]              80
+ InvertedResidual-78             [-1, 40, 7, 7]               0
+           Conv2d-79            [-1, 120, 7, 7]           4,800
+      BatchNorm2d-80            [-1, 120, 7, 7]             240
+        Hardswish-81            [-1, 120, 7, 7]               0
+           Conv2d-82            [-1, 120, 7, 7]           3,000
+      BatchNorm2d-83            [-1, 120, 7, 7]             240
+        Hardswish-84            [-1, 120, 7, 7]               0
+AdaptiveAvgPool2d-85            [-1, 120, 1, 1]               0
+           Conv2d-86             [-1, 32, 1, 1]           3,872
+             ReLU-87             [-1, 32, 1, 1]               0
+           Conv2d-88            [-1, 120, 1, 1]           3,960
+      Hardsigmoid-89            [-1, 120, 1, 1]               0
+SqueezeExcitation-90            [-1, 120, 7, 7]               0
+           Conv2d-91             [-1, 48, 7, 7]           5,760
+      BatchNorm2d-92             [-1, 48, 7, 7]              96
+ InvertedResidual-93             [-1, 48, 7, 7]               0
+           Conv2d-94            [-1, 144, 7, 7]           6,912
+      BatchNorm2d-95            [-1, 144, 7, 7]             288
+        Hardswish-96            [-1, 144, 7, 7]               0
+           Conv2d-97            [-1, 144, 7, 7]           3,600
+      BatchNorm2d-98            [-1, 144, 7, 7]             288
+        Hardswish-99            [-1, 144, 7, 7]               0
+AdaptiveAvgPool2d-100            [-1, 144, 1, 1]               0
+          Conv2d-101             [-1, 40, 1, 1]           5,800
+            ReLU-102             [-1, 40, 1, 1]               0
+          Conv2d-103            [-1, 144, 1, 1]           5,904
+     Hardsigmoid-104            [-1, 144, 1, 1]               0
+SqueezeExcitation-105            [-1, 144, 7, 7]               0
+          Conv2d-106             [-1, 48, 7, 7]           6,912
+     BatchNorm2d-107             [-1, 48, 7, 7]              96
+InvertedResidual-108             [-1, 48, 7, 7]               0
+          Conv2d-109            [-1, 288, 7, 7]          13,824
+     BatchNorm2d-110            [-1, 288, 7, 7]             576
+       Hardswish-111            [-1, 288, 7, 7]               0
+          Conv2d-112            [-1, 288, 4, 4]           7,200
+     BatchNorm2d-113            [-1, 288, 4, 4]             576
+       Hardswish-114            [-1, 288, 4, 4]               0
+AdaptiveAvgPool2d-115            [-1, 288, 1, 1]               0
+          Conv2d-116             [-1, 72, 1, 1]          20,808
+            ReLU-117             [-1, 72, 1, 1]               0
+          Conv2d-118            [-1, 288, 1, 1]          21,024
+     Hardsigmoid-119            [-1, 288, 1, 1]               0
+SqueezeExcitation-120            [-1, 288, 4, 4]               0
+          Conv2d-121             [-1, 96, 4, 4]          27,648
+     BatchNorm2d-122             [-1, 96, 4, 4]             192
+InvertedResidual-123             [-1, 96, 4, 4]               0
+          Conv2d-124            [-1, 576, 4, 4]          55,296
+     BatchNorm2d-125            [-1, 576, 4, 4]           1,152
+       Hardswish-126            [-1, 576, 4, 4]               0
+          Conv2d-127            [-1, 576, 4, 4]          14,400
+     BatchNorm2d-128            [-1, 576, 4, 4]           1,152
+       Hardswish-129            [-1, 576, 4, 4]               0
+AdaptiveAvgPool2d-130            [-1, 576, 1, 1]               0
+          Conv2d-131            [-1, 144, 1, 1]          83,088
+            ReLU-132            [-1, 144, 1, 1]               0
+          Conv2d-133            [-1, 576, 1, 1]          83,520
+     Hardsigmoid-134            [-1, 576, 1, 1]               0
+SqueezeExcitation-135            [-1, 576, 4, 4]               0
+          Conv2d-136             [-1, 96, 4, 4]          55,296
+     BatchNorm2d-137             [-1, 96, 4, 4]             192
+InvertedResidual-138             [-1, 96, 4, 4]               0
+          Conv2d-139            [-1, 576, 4, 4]          55,296
+     BatchNorm2d-140            [-1, 576, 4, 4]           1,152
+       Hardswish-141            [-1, 576, 4, 4]               0
+          Conv2d-142            [-1, 576, 4, 4]          14,400
+     BatchNorm2d-143            [-1, 576, 4, 4]           1,152
+       Hardswish-144            [-1, 576, 4, 4]               0
+AdaptiveAvgPool2d-145            [-1, 576, 1, 1]               0
+          Conv2d-146            [-1, 144, 1, 1]          83,088
+            ReLU-147            [-1, 144, 1, 1]               0
+          Conv2d-148            [-1, 576, 1, 1]          83,520
+     Hardsigmoid-149            [-1, 576, 1, 1]               0
+SqueezeExcitation-150            [-1, 576, 4, 4]               0
+          Conv2d-151             [-1, 96, 4, 4]          55,296
+     BatchNorm2d-152             [-1, 96, 4, 4]             192
+InvertedResidual-153             [-1, 96, 4, 4]               0
+          Conv2d-154            [-1, 576, 4, 4]          55,296
+     BatchNorm2d-155            [-1, 576, 4, 4]           1,152
+       Hardswish-156            [-1, 576, 4, 4]               0
+AdaptiveAvgPool2d-157            [-1, 576, 1, 1]               0
+          Linear-158                 [-1, 1024]         590,848
+       Hardswish-159                 [-1, 1024]               0
+         Dropout-160                 [-1, 1024]               0
+          Linear-161                    [-1, 5]           5,125
+================================================================
+Total params: 1,522,981
+Trainable params: 1,522,981
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.11
+Forward/backward pass size (MB): 8.18
+Params size (MB): 5.81
+Estimated Total Size (MB): 14.11
+----------------------------------------------------------------
